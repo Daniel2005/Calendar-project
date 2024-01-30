@@ -1,0 +1,205 @@
+.calendar {
+  width: 100%;
+  margin: 0px;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  color: rgb(96, 96, 96);
+  cursor: pointer;
+  transform: translateX(-4px);
+}
+
+.emptyCell {
+  flex: 0 0 80px;
+}
+
+.dayHeader {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.hourRow {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  flex-grow: 1;
+}
+
+.hourLabel {
+  flex: 0 0 60px;
+  text-align: center;
+  padding: 10px;
+}
+
+.dayCell {
+  flex: 1;
+  border-left: 1px solid #ddd;
+  position: relative;
+}
+
+.levelLightGreen {
+  background-color: rgb(202, 229, 171);
+  border: rgb(141, 193, 83) 1px solid;
+}
+
+.levelGreen {
+  background-color: rgb(167, 212, 115);
+  border: rgb(141, 193, 83) 1px solid;
+}
+
+.levelDarkGreen {
+  background-color: rgb(141, 193, 83);
+  border: rgb(141, 193, 83) 1px solid;
+}
+
+.levelLightOrange {
+  background-color: rgb(255, 222, 156);
+  border: rgb(246, 187, 67) 1px solid;
+}
+
+.levelOrange {
+  background-color: rgb(255, 209, 116);
+  border: rgb(246, 187, 67) 1px solid;
+}
+
+.levelDarkOrange {
+  background-color: rgb(246, 187, 67);
+  border: rgb(246, 187, 67) 1px solid;
+}
+
+.levelRed {
+  background-color: #f44336;
+}
+
+.eventBox{
+  padding: 4px; 
+  margin: 8px; 
+  border-radius: 8px; 
+  background-color: #ffffff; 
+  border:rgb(202, 199, 199) solid 1px;
+  margin-top: 7px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.greenEventBox{
+  border: rgb(141, 193, 83) solid 1px;
+}
+
+.imageBox{
+  display: flex; 
+  margin-left: 8px; 
+  align-items: center; 
+  margin-bottom: 0;
+  margin-top: 3px;
+  margin-left: 0;
+}
+
+.eventImage{
+  border-radius: 10px; 
+  border-width: 2px; 
+  margin-bottom: 2px;
+  margin-right: 18px;
+  margin-left: 3px;
+  height: 40px;
+  width: 40px;
+}
+
+.eventTitle{
+  font-size: 12px;
+  line-height: 28px; 
+  font-weight: 700; 
+  margin-bottom: 0;
+  margin-top: -12px;
+  color: rgb(96, 96, 96);
+}
+
+.eventHour{
+  color: rgb(96, 96, 96); 
+  font-size: 10px;
+  margin: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.eventLevelBox{
+  display: flex; 
+  margin-top: 2.4px; 
+  margin-left: 4.8px;
+  margin-bottom: 6.4px;
+}
+
+.levelBlock {
+  position: relative;
+  color: #3B5323;
+  padding: 1px 2px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 11.2px;
+  margin-right: 4px;
+  align-items: center;
+  display: flex;
+}
+
+.levelBlock span {
+  height: 10px;
+}
+.circle{
+  border-radius: 50%;
+	height: 5px;
+	width: 5px;
+	border: 1px solid rgb(96, 96, 96);
+  margin-right: 3px;
+}
+
+.greenCircle{
+  border-radius: 50%;
+	height: 5px;
+	width: 5px;
+	border: 1px solid rgb(96, 96, 96);
+  margin-right: 3px;
+  background-color: rgb(141, 193, 83);
+}
+
+.currentDay {
+  color: rgb(246, 187, 67);
+}
+
+.changeLanguageButton {
+  position: absolute;
+  top: 6.5px;
+  left: 28px;
+  padding: 5px;
+  border: 1px solid rgb(246, 187, 67);
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 0, 0.32, 1);
+  background-color: transparent;
+}
+
+.changeLanguageButton:hover{
+  color: black;
+  background-color: rgb(246, 187, 67);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0px 5px;
+  transform: translateY(-1px);
+}
